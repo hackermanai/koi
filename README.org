@@ -15,15 +15,59 @@ You can change allowed files in your ~.hackerman~ config file.
 
 #+begin_src
 
-% echo 'hello'
-hello
+% echo "hello koi!"
+hello koi!
 
-#+begin_src
-42**42
-150130937545296572356771972164254457814047970568738777235893533016064
+% ollama list
+NAME                              ID              SIZE      MODIFIED      
+qwen3-next:80b-cloud              f5ccd68d2872    -         3 weeks ago      
+qwen2.5-coder:1.5b                6d3abb8d2d53    986 MB    12 months ago    
 
 #+end_src
 
+Evaluate Python expression.
+
+#+begin_src
+
+42**2
+1764
+
+#+end_src
+
+Inline chat.
+This feature requires setting up Ollama in your ~.hackerman~ config file
+
+#+begin_src
+
+[models]
+
+code_completion                     qwen2.5-coder:1.5b
+inline_chat                         qwen3-coder:480b-cloud
+
+#+end_src
+
+Move cursor to line/ or select text and /Submit Prompt/ (or ~Cmd + K~) to generate response.
+
+#+begin_src
+
+write fizz buzz in reverse using basic
+
+> Here's FizzBuzz in reverse using BASIC:
+>
+> 10 FOR I = 100 TO 1 STEP -1
+> 20 IF I MOD 15 = 0 THEN PRINT "FizzBuzz"
+> 30 ELSE IF I MOD 3 = 0 THEN PRINT "Fizz"
+> 40 ELSE IF I MOD 5 = 0 THEN PRINT "Buzz"
+> 50 ELSE PRINT I
+> 60 NEXT I
+>
+> This counts down from 100 to 1, printing:
+> - "FizzBuzz" for multiples of 15
+> - "Fizz" for multiples of 3
+> - "Buzz" for multiples of 5
+> - The number itself otherwise
+
+#+end_src
 
 ** How to create custom editor commands
 

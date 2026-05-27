@@ -1,5 +1,5 @@
 
-* Issue tracker for Koi Editor
+* Koi Editor
 
 [[https://github.com/hackermanai/koi/issues][Submit feature request or report bug]]
 

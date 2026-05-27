@@ -3,6 +3,9 @@
 
 [[https://github.com/hackermanai/koi/issues][Submit feature request or report bug]]
 
+[[https://koieditor.com/EULA][End User License Agreement]]
+
+[[https://koieditor.com/PRIVACY][Privacy Policy]]
 
 ** How to use inline shell and chat
 
@@ -34,7 +37,8 @@ Evaluate Python expression.
 
 #+end_src
 
-Inline chat.
+*Chat with LLMs*
+
 This feature requires setting up Ollama in your ~.hackerman~ config file
 
 #+begin_src
@@ -68,6 +72,7 @@ write fizz buzz in reverse using basic
 > - The number itself otherwise
 
 #+end_src
+
 
 ** How to create custom editor commands
 

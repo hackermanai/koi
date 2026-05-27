@@ -1,128 +1,58 @@
 
-* Issue tracker for Hackerman Text
+* Issue tracker for Koi Editor
 
-[[https://github.com/hackerman-software/text/issues][Issues]] | [[https://github.com/hackerman-software/text/discussions/categories/feature-requests][Feature requests]] | [[https://github.com/hackerman-software/text/blob/main/DOC.org][Documentation]] | [[https://github.com/hackerman-software/text/blob/main/EULA][End User License Agreement]] | [[https://github.com/hackerman-software/text/blob/main/PRIVACY][Privacy Policy]]
-
-** Getting started
-
-*** Tab multi-select
-
-[[./tab_multi_select.gif]]
-
-Shift click on tabs to multi-select.
-
-*** Code completion
-
-[[./code_completion.gif]]
-
-*Ollama*
-
-1. Install Ollama, and download one of the recommended models (e.g. [[https://ollama.com/library/qwen2.5-coder]])
-2. Update your ~.hackerman~ config file (/Right-Click/ or ~Cmd + Shift + P~ to open function explorer, then select /Open Config File/)
-3. Find and edit this section:
-
-    #+begin_src
-    [models]
-    
-    -- ollama
-    code_completion                     ollama, qwen2.5-coder:1.5b
-    #+end_src
-
-4. Code completion can be triggered with /Code Completion/ (or ~Cmd + K~)
-
-*Mistral*
-
-1. Create Mistral account, and get your api key (see [[https://docs.mistral.ai/getting-started/quickstart]])
-2. Update your ~.hackerman~ config file (/Right-Click/ or ~Cmd + Shift + P~ to open function explorer, then select /Open Config File/)
-3. Find and edit this section (replace ~API_KEY~ with your Mistral api key):
-
-    #+begin_src
-    [models]
-    
-    -- cloud providers
-    code_completion                     mistral, codestral-latest, API_KEY
-    #+end_src
-
-4. Code completion can be triggered with /Code Completion/ (or ~Cmd + K~)
-
-*Inception*
-
-1. Create Inception account, and get your api key (see [[https://docs.inceptionlabs.ai/get-started/authentication]])
-2. Update your ~.hackerman~ config file (/Right-Click/ or ~Cmd + Shift + P~ to open function explorer, then select /Open Config File/)
-3. Find and edit this section (replace ~API_KEY~ with your Inception api key):
-
-    #+begin_src
-    [models]
-    
-    -- cloud providers
-    code_completion                     inception, mercury-coder, API_KEY
-    #+end_src
-
-4. Code completion can be triggered with /Code Completion/ (or ~Cmd + K~)
+[[https://github.com/hackermanai/koi/issues][Submit feature request or report bug]]
 
 
-*** Inline shell commands
-
-[[./inline_commands.gif]]
+** How to use inline shell and chat
 
 Inline commands can be triggered with /Inline Commands/ (or ~Cmd + Shift + Return~).
 
 *Shell and Python eval*
 
-This feature is only allowed in ~.txt~ and ~.md~ files by default.
+This feature is only allowed in Generic-Default, ~.txt~, ~.md~, ~.org~ files by default.
 You can change allowed files in your ~.hackerman~ config file.
 
 #+begin_src
+
 % echo 'hello'
 hello
 
 #+begin_src
 42**42
 150130937545296572356771972164254457814047970568738777235893533016064
+
 #+end_src
 
-*Org-mode code execution*
 
-You an execute /Python/, /Lua/, /JavaScript/, and /Hy/ code in your ~.org~ files.
-Move cursor inside code block and run /Inline Commands/ (or ~Cmd + Shift + Return~).
-
-#+begin_src hylang :var name=Michael
-(defn main [name]
-    (print "Welcome to Hy in org-mode," name "!")
-)
-(main name)
-#+end_src
-
-#+begin_src
-#+RESULTS: True
-: Welcome to Hy in org-mode, Michael !
-#+end_src
-
-*** Custom editor commands
-
-[[./custom_editor_commands.gif]]
+** How to create custom editor commands
 
 This feature is disabled by default.
 You can enable in your ~.hackerman~ config file.
 
 #+begin_src
+
 scripts_enabled                     true
 allow_unsafe_scripts                false -- allow imports
+
 #+end_src
 
-Scripts are loaded from ~.../Application Support/Hackerman Text/.hackerman-scripts~.
+User scripts are loaded from ~.../Application Support/Koi/.hackerman-scripts~.
 You can provide a path to your own ~.py~ file if stored elsewhere.
 
 #+begin_src
-path_to_scripts_file                path/to/plugins.py -- path to scripts file, requires restart
+
+path_to_scripts_file                path/to/plugins.py
+
 #+end_src
 
-*** Tips and tricks
 
-- Right click to /Show Function Explorer/ (or ~Cmd + Shift + P~), this list shows all active key bindings
+** Other tips and tricks
+
+- Right click to /Show Command Palette/ (or ~Cmd + Shift + P~), this list shows all editor commands and key bindings
 - Double click on line number to /Fold Line/ (or ~Cmd + L~)
 - Double click on word to select, ~Cmd~ plus double click on another word to add to selection
 - Select text then /Select Next Match/ (or ~Cmd + E~) to select next exact match, /Unselect Next Match/ (or ~Cmd + Shift + E~) to unselect last added match
 - Find with /Find In File/ (or ~Cmd + F~), ~Esc~, then /Select Matches/ to select/add cursor to each match
-- Select brace to highlight open and/or close brace (on-demand brace match)
-- If not working out of projects (e.g. dropped folder on editor), /Show File Explorer/ (or ~Cmd + P~) to open file epxplorer, then type e.g. ~hackerman/~ to quickly find files in specific folders
+- Select brace to highlight open and/or closing brace
+- /Show File Explorer/ (or ~Cmd + P~) shows all files and folder on Desktop by default, ~my-project/~ to quickly find files in specific folders

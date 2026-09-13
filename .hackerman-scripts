@@ -1,0 +1,36 @@
+
+# This is the default scripts-file for Koi Editor
+
+@command("Word count")
+def word_count():
+    import re
+    
+    text = selected_text()
+    count = len(re.findall(r"\b[\w'-]+\b", text))
+    
+    message(f"Word count: {count:,} words")
+
+@command("Insert UUID")
+def insert_uuid():
+    from uuid import uuid4
+    insert_text(text=str(uuid4()))
+    
+@command("Markdown: Selection to link")
+def insert_link():
+    text = selected_text()
+    insert_text(text=f"[{text}](https://{text})")
+
+@command("Markdown: Insert unchecked box")
+def insert_unchecked_box():
+    insert_text(text="- [ ] ")
+
+@command("Markdown: Wrap selection in fenced block")
+def fenced_block():
+    text = selected_text()
+    insert_text(text=f"```\n{text}\n```")
+
+@command("Markdown: Bold")
+def make_bold():
+    text = selected_text()
+    insert_text(text=f"**{text}**")
+

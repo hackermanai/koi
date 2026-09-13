@@ -1,0 +1,845 @@
+
+[license]
+
+path_to_license_file                -- path to license file, e.g. /Users/michael/Desktop/license.json
+
+
+[editor]
+
+font                                SF Mono -- use any installed font or place in /Application Support/Koi/fonts
+font_weight                         -- light, normal, medium, bold, leave empty for default: normal on light mode and light on dark mode.
+font_size                           15
+
+line_extra_height                   2
+tab_width                           4
+
+theme                               adaptive -- see list of built-in themes here: https://koieditor.com/documentation/#appearance
+adaptive_theme                      koi, koi-dark -- set theme to "adaptive" to use
+
+auto_indent                         true
+auto_complete                       true
+
+file_explorer_root                  -- absolute path to folder to set as root on startup, default is Desktop
+file_types_to_exclude               .dmg, .app, .git, .ttf, .dylib, .so, .venv, .pyc, .zip, .egg, .DS_Store, dist, build
+
+files_to_open_on_startup            -- list of absolute paths to files to open on startup, e.g. todo.org, notes.txt, work.py
+
+inline_command_in_files             txt, md, org,
+inline_shell_symbol                 %
+inline_chat_symbol                  >
+
+bookmark_prefix                     !>
+annotation_words                    TODO, NOTE, MARK, FIXME -- list of words used by navigator panel
+
+scripts_enabled                     false
+allow_unsafe_scripts                false -- allow imports
+
+click_on_links                      false -- if false, use inline_command to activate
+
+-- these bindings are additive, so does not override existing bindings
+accept_auto_completion              -- tab, newline, move_caret_line_end (default is newline)
+accept_code_completion              -- tab, newline, move_caret_line_end (default is tab)
+
+-- ui
+
+show_line_numbers                   true
+show_scrollbar                      true
+show_minimap                        false
+show_indent_guides                  true
+show_annotations                    true
+show_ui_borders                     false
+show_splitter_handle                false
+
+-- cursor
+
+cursor_width                        2
+cursor_extra_height                 8
+
+cursor_as_block                     false
+cursor_line_highlight               true
+
+cursor_blink                        false
+cursor_blink_period                 530 -- 530 is default
+
+cursor_trail_effect                 false
+
+-- statusbar
+
+show_line_info                      true
+-- show_word_count                     false
+show_file_explorer_root             true
+show_file_with_path                 false
+show_model_info                     true
+show_active_lexer                   true
+
+-- show_debug_info                     false
+
+-- misc
+
+ui_font                             SF Mono
+ui_font_weight                      -- leave empty for default, normal
+ui_font_size                        -- leave empty for default, 12pt
+
+scrollbar_width                     4
+minimap_width                       64
+
+open_on_largest_screen              true
+ 
+eol_mode                            lf -- crlf, cr, lf
+eol_symbols_visible                 false
+
+terminal_to_use                     -- Ghostty, Warp, default is Terminal
+
+window_opacity                      1
+selection_opacity                   0.2
+indent_guides_opacity               0.1
+whitespace_opacity                  0.1
+
+-- unsaved_symbol                      *
+whitespace_symbol                   ▪
+
+vertical_rulers                     -- list of columns
+
+-- experimental
+
+-- always_show_completion_list         true
+-- wrap_word                           txt, md, 
+tabs_over_spaces                    false
+font_ligatures                      false -- requires restart
+path_to_scripts_file                -- path to external scripts file, requires restart
+-- use_native_title_bar                false
+-- dim_non_active_editors              false
+-- fixed_line_number_width             false
+-- path_to_shell                       /bin/zsh -- not in use
+
+
+[models]
+
+-- requires Ollama
+
+-- code_completion                     qwen2.5-coder:1.5b
+-- inline_chat                         gpt-oss:120b-cloud
+
+
+[keybinds]
+
+-- Important: Use Comma, Period, Plus, Minus for symbols , . + -
+
+new_file                            Cmd + N
+new_window                          Cmd + Shift + N
+open_file                           Cmd + O
+save_file                           Cmd + S
+save_file_as                        Cmd + Shift + S
+save_file_copy_as
+close_file                          Cmd + W
+close_window                        Cmd + Shift + W
+close_other_files
+reopen_last_closed_file             Cmd + Shift + T
+reload_from_disk                    Cmd + R
+
+fold_line                           Cmd + L
+fold_all                            Cmd + Shift + L
+
+-- code_completion                     Option + Return
+submit_prompt
+
+line_comment                        Cmd + /
+zoom_in                             Cmd + =,                Cmd + Plus
+zoom_out                            Cmd + _,                Cmd + Minus
+toggle_split_editor                 Cmd + \
+show_file_explorer                  Cmd + P
+show_outline_panel                  Cmd + I
+show_buffer_explorer                Cmd + Shift + O
+show_command_palette                Cmd + Shift + P
+-- open_terminal_at_file
+open_terminal                       Cmd + T
+open_config_file                    Cmd + Comma
+open_scripts_file                   Cmd + Shift + Comma
+reveal_in_finder
+
+select_all                          Cmd + A
+undo                                Cmd + Z,                Control + /
+redo                                Cmd + Shift + Z,        Control + Shift + /
+lowercase                           Option + L
+uppercase                           Option + U
+cancel                              Escape,                 Control + G
+newline                             Return,                 Cmd + Return,           Control + J
+tab                                 Tab
+backtab                             Shift + Tab
+center_on_cursor                    Control + L
+line_indent                         Cmd + ]
+line_unindent                       Cmd + [
+selection_duplicate
+move_line_up
+move_line_down
+select_next_match                   Cmd + E
+unselect_last_match                 Cmd + Shift + E
+insert_line_below                   Shift + Return
+insert_line_above
+
+open_file_in_new_window
+copy_path_to_file                   Cmd + Shift + C
+reset_window_position
+reset_file_explorer
+reload_file_explorer
+toggle_read_only
+-- toggle_newspaper_scroll
+select_matches                      Cmd + Option + F
+add_cursors_to_line_starts
+show_license_info
+open_diff_from_git
+open_diff_from_buffers
+diff_open_buffers_word_indicators
+go_to_line                          Cmd + G
+-- tear_off_buffer
+reset_zoom                          Cmd + 0
+replace_all_eol
+replace_tabs_with_spaces
+toggle_indent_guides
+sort_selected_lines
+sort_selected_lines_reverse
+toggle_word_wrap
+unselect_other_active_tabs          Cmd + Escape
+format_csv_columns
+
+move_caret_to_fold_above            Option + Up
+move_caret_to_fold_below            Option + Down
+
+extend_selection_to_fold_above
+extend_selection_to_fold_below
+
+move_up_to_empty_line
+move_up_to_empty_line_extend
+
+move_down_to_empty_line
+move_down_to_empty_line_extend
+
+-- accept_first_completion_item
+-- show_completion_list                Cmd + '
+
+detach_lexer
+auto_detect_lexer
+
+detect_tab_width
+tab_width_2_spaces
+tab_width_4_spaces
+tab_width_8_spaces
+
+indent_with_spaces
+indent_with_tabs
+
+toggle_eol_symbols
+replace_all_eol
+eol_mode_lf
+eol_mode_crlf
+eol_mode_cr
+
+find_in_file                        Cmd + F
+show_search_explorer                Cmd + Shift + F
+
+python_eval_line                    Cmd + Option + E
+
+-- this is used to execute org-mode code, run shell commands, and evaluate expressions
+inline_command                      Cmd + Shift + Return
+
+-- Native MacOS keys bindings for document are rebound to para by default due to misclick prone
+document_start                      Option + Comma
+document_start_extend               Option + Shift + Comma
+document_end                        Option + Period
+document_end_extend                 Option + Shift + Period
+
+home
+home_extend
+
+move_caret_back                     Left,                   Control + B
+move_caret_forward                  Right,                  Control + F
+
+extend_selection_back               Shift + Left,           Control + Shift + B
+extend_selection_forward            Shift + Right,          Control + Shift + F
+
+line_up                             Up,                     Control + P
+line_up_extend                      Shift + Up,             Control + Shift + P
+line_down                           Down,                   Control + N
+line_down_extend                    Shift + Down,           Control + Shift + N
+
+line_up_start
+line_up_start_extend
+
+line_down_end
+line_down_end_extend
+
+move_caret_line_start               Cmd + Left,             Control + A
+move_caret_line_end                 Cmd + Right,            Control + E
+
+extend_selection_line_start         Cmd + Shift + Left,     Control + Shift + A
+extend_selection_line_end           Cmd + Shift + Right,    Control + Shift + E
+
+line_scroll_up                      Control + Up
+line_scroll_down                    Control + Down
+line_add_caret_up                   Control + Shift + Up
+line_add_caret_down                 Control + Shift + Down
+
+duplicate_line                      Cmd + Shift + D
+-- transpose_line
+
+copy                                Cmd + C
+cut                                 Cmd + X
+paste                               Cmd + V
+
+move_caret_paragraph_above          Cmd + Up,            Option + A
+move_caret_paragraph_below          Cmd + Down,          Option + E
+
+extend_selection_paragraph_above    Cmd + Shift + Up,    Option + Shift + A
+extend_selection_paragraph_below    Cmd + Shift + Down,  Option + Shift + E
+
+move_caret_back_word                Option + Left,          Option + B
+move_caret_forward_word
+
+extend_selection_back_word          Option + Shift + Left,  Option + Shift + B
+extend_selection_forward_word
+
+move_caret_back_word_end
+move_caret_forward_word_end         Option + Right,         Option + F
+
+extend_selection_back_word_end
+extend_selection_forward_word_end   Option + Shift + Right, Option + Shift + F
+
+move_caret_back_word_part
+move_caret_forward_word_part
+
+extend_selection_back_word_part     Control + Shift + Left
+extend_selection_forward_word_part  Control + Shift + Right
+
+page_up                             Option + V
+page_down                           Control + V
+
+-- extend_selection_page_up            Option + Shift + V
+-- extend_selection_page_down          Control + Shift + V
+
+page_up_stuttered
+page_down_stuttered
+
+-- stuttered_page_up_extend
+-- stuttered_page_down_extend
+
+delete_back                         Backspace
+delete_back_not_newline             Shift + Backspace
+delete_forward                      Cmd + D,                Control + D
+
+delete_back_word                    Option + Backspace,     Control + Backspace
+delete_forward_word                 Option + D
+
+delete_line                         Cmd + Shift + K
+delete_to_line_start                Cmd + Backspace,        Control + Shift + Backspace
+delete_to_line_end                  Control + K
+
+-- delete_to_blank_line_above          Option + Shift + K
+-- delete_to_blank_line_below          Option + K
+
+-- pane navigation
+previous_tab                        Cmd + ;, Option + Cmd + Left
+previous_tab_extend                 Cmd + Shift + ;, Option + Shift + Cmd + Left
+next_tab                            Cmd + ', Option + Cmd + Right
+next_tab_extend                     Cmd + Shift + ', Option + Shift + Cmd + Right
+
+focus_main_editor                   Control + Left
+focus_split_editor                  Control + Right
+
+-- quick switch to buffer
+switch_to_buffer_1                  Cmd + 1
+switch_to_buffer_2                  Cmd + 2
+switch_to_buffer_3                  Cmd + 3
+switch_to_buffer_4                  Cmd + 4
+switch_to_buffer_5                  Cmd + 5
+switch_to_buffer_6                  Cmd + 6
+switch_to_buffer_7                  Cmd + 7
+switch_to_buffer_8                  Cmd + 8
+switch_to_buffer_9                  Cmd + 9
+
+extend_to_buffer_1
+extend_to_buffer_2
+extend_to_buffer_3
+extend_to_buffer_4
+extend_to_buffer_5
+extend_to_buffer_6
+extend_to_buffer_7
+extend_to_buffer_8
+extend_to_buffer_9
+
+
+[user]
+
+-- List your custom functions here, set key binding using same format as above
+
+
+
+-- themes
+
+-- background                   (editor background)
+-- foreground                   (editor foreground)
+-- text_color                   (highlighted text color)
+-- cursor                       (cursor color)
+
+-- default                      (default syntax color)
+-- keyword                      (keyword syntax color)
+-- class                        (class syntax color)
+-- name                         (function name syntax color)
+-- lambda                       (anonymous function syntax color)
+-- string                       (string syntax color)
+-- number                       (number syntax color)
+-- operator                     (operator syntax color)
+-- comment                      (comment syntax color)
+-- special                      (special syntax color, used in some lexers to mark some syntax, eg. self, src, href)
+-- type                         (type syntax color)
+-- constant                     (constant syntax color)
+-- builtin                      (builtin function syntax color)
+
+-- _error                       (used in diffs)
+-- _warning                     (used in diffs, warnings in status bar)
+-- _success                     (used in diffs)
+
+-- _selection                   (optional style for selections, fallback to cursor color)
+-- _bold                        (optional style for bold rich text syntax, fallback to builtin)
+-- _italic                      (optional style for italic rich text syntax, fallback to function name)
+-- _underline                   (optional style for underline rich text syntax, fallback to default)
+-- _verbatim                    (optional style for verbatim rich text syntax, fallback to function name)
+-- _strike                      (optional style for strike rich text syntax, fallback to comment)
+-- _code                        (optional style for inline code in markdown and org, fallback to comment)
+-- _link                        (optional style for links in markdown and org, fallback to special)
+-- _todo                        (optional style for todo syntax, fallback to cursor color)
+-- _annotation                  (optional style for editor annotations, fallback to comment)
+
+-- valid style formats:
+-- #292929                      (text color)
+-- #292929, bold                (text color, modification)
+-- #9ECEF5, #9ECEF5             (text color, background color)
+-- #9ECEF5, #9ECEF5, italic     (text color, background color, modification)
+
+[hackerman]
+
+background                          #111312
+foreground                          #777B78
+text_color                          #F2F1EC
+cursor                              #F2F1EC
+
+default                             #D8D8D2
+keyword                             #F0A45D
+class                               #E8E6DF
+name                                #D8D8D2
+lambda                              #D9A7C7
+string                              #C8B97A
+number                              #D9A7C7
+operator                            #AEB1AD
+comment                             #777B78
+special                             #c6e5ff
+type                                #c6e5ff
+constant                            #D9A7C7
+builtin                             #D7B47A
+
+_highlight                          #C8B97A
+_link                               #AABFC1, #AABFC1
+
+[koi]
+
+background      #ffffff
+foreground      #111111
+text_color      #111111
+cursor          #1e63e1
+
+default         #5d5d5d
+keyword         #e03526
+class           #111111
+name            #292929
+lambda          #292929
+string          #787878
+number          #292929
+operator        #292929
+comment         #9E9E9E
+special         #493cff, 493cff
+type            #1e63e1
+constant        #292929
+builtin         #5D5D5D
+
+_selection      #1e63e1
+_highlight      #1e63e1
+_link           #1e63e1, #1e63e1
+
+_error          #e03526, #e03526
+
+[koi-dark]
+
+background                          #212529
+foreground                          #f7f7f4
+text_color                          #ffffff
+cursor                              #C6E5FF
+
+default                             #f7f7f4
+keyword                             #E67D74
+class                               #D0C5A9
+name                                #D0C5A9
+lambda                              #D699B5
+string                              #D4BC7D
+number                              #D699B5
+operator                            #E0AD82
+comment                             #87919D
+special                             #C6E5FF
+type                                #C6E5FF
+constant                            #D699B5
+builtin                             #E0AD82
+
+_highlight                          #D4BC7D
+_link                               #C6E5FF, #C6E5FF
+
+[koi-mono]
+
+background      #ffffff
+foreground      #111111
+text_color      #111111
+cursor          #493cff
+
+default         #5d5d5d
+keyword         #111111
+class           #111111
+name            #292929
+lambda          #292929
+string          #787878
+number          #292929
+operator        #292929
+comment         #9E9E9E
+special         #493cff, #493cff
+type            #787878
+constant        #292929
+builtin         #5D5D5D
+
+_selection      #493cff
+_highlight      #493cff
+
+[focus]
+
+background                          #15212A
+foreground                          #87919D
+text_color                          #BFC9DB
+cursor                              #26B2B2
+
+default                             #BFC9DB
+keyword                             #E67D74
+class                               #D0C5A9
+name                                #D0C5A9
+lambda                              #D699B5
+string                              #D4BC7D
+number                              #D699B5
+operator                            #E0AD82
+comment                             #87919D
+special                             #26B2B2
+type                                #26B2B2
+constant                            #D699B5
+builtin                             #E0AD82
+
+_highlight                          #D4BC7D
+
+[writer]                 
+
+background                         #191919
+foreground                         #C5C5C5
+text_color                         #C5C5C5
+cursor                             #00B6FF
+
+default                            #C5C5C5
+keyword                            #CA7E5F
+class                              #B48B4B
+name                               #B48B4B
+lambda                             #B48B4B
+string                             #7D9A67
+number                             #7592B8
+operator                           #C5C5C5
+comment                            #9198A1
+special                            #00B6FF
+type                               #C5C5C5
+constant                           #AB84A8
+builtin                            #D07773
+
+_highlight                         #FFFF3B
+
+[github-dark]                 
+
+background                         #0F1217
+foreground                         #868D97
+text_color                         #E3E9EF
+cursor                             #59C2FF
+
+default                            #E3E9EF
+keyword                            #FB6E65
+class                              #EE9B52
+name                               #D2A8FF
+lambda                             #D2A8FF
+string                             #A5D6FF
+number                             #77BDFB
+operator                           #77BDFB
+comment                            #9198A1
+special                            #79C0FF
+type                               #79C0FF
+constant                           #79C0FF
+builtin                            #77BDFB
+
+_error                             #FC4646, #FC4646
+
+[kujukuju]
+
+background                          #141824
+foreground                          #87919D
+text_color                          #BFC9DB
+cursor                              #26B2B2
+
+default                             #CBCEBC
+keyword                             #F07178
+class                               #D0C5A9
+name                                #FFCC66
+lambda                              #E0AD82
+string                              #BAE67E
+number                              #FF6A27
+operator                            #F07178
+comment                             #87919D
+special                             #26B2B2
+type                                #FFA759
+constant                            #D699B5
+builtin                             #9DD2BB
+
+[ayu-dark]
+
+background                          #10141C
+foreground                          #565B67
+text_color                          #BFBDB6
+cursor                              #59C2FF
+
+default                             #BFBDB6
+keyword                             #FF8F3F
+class                               #5AC2FF
+name                                #FFB454
+lambda                              #D2A6FF
+string                              #AAD94C
+number                              #FFB454
+operator                            #BFBDB6
+comment                             #6A7279
+special                             #59C2FF
+type                                #59C2FF
+constant                            #FFB454
+builtin                             #F07178
+
+_warning                            #FCAF24, #FCAF24, italic
+
+[chatgpt]
+
+background                          #181818
+foreground                          #FFFFFF
+text_color                          #FFFFFF
+cursor                              #FFFFFF
+
+default                             #FFFFFF
+keyword                             #FF6B7A
+class                               #B392F0
+name                                #FFA657
+lambda                              #B392F0
+string                              #9ECBFF
+number                              #79B8FF
+operator                            #FF6B7A
+comment                             #8B949E
+special                             #B392F0
+type                                #79B8FF
+constant                            #79B8FF
+builtin                             #E36209
+
+
+[jblow]
+
+background                          #072626
+foreground                          #BFC9DB
+text_color                          #FFFFFF
+cursor                              #90EE90
+
+default                             #D3B58D
+keyword                             #FFFFFF
+class                               #D3B58D
+name                                #D3B58D
+lambda                              #7FFFD4
+string                              #98FB98
+number                              #D699B5
+operator                            #E0AD82
+comment                             #6DB75D
+special                             #7FFFD4
+type                                #98FB98
+constant                            #D699B5
+builtin                             #E67D74
+
+_highlight                          #CD6889
+
+_error                              #FF0000
+_warning                            #E4D97D
+_success                            #227722
+
+
+[mono-light]
+
+background                          #FFFFFF
+foreground                          #000000
+text_color                          #000000
+cursor                              #000000
+
+default                             #000000
+keyword                             #000000, bold
+class                               #000000, italic
+name                                #000000
+lambda                              #000000
+string                              #000000
+number                              #000000
+operator                            #000000
+comment                             #000000, #000000
+special                             #000000
+type                                #000000
+constant                            #000000
+builtin                             #000000
+
+_highlight                          #000000
+
+[dracula]
+
+background                          #282A36
+foreground                          #6272A4
+text_color                          #F8F8F2
+cursor                              #F8F8F2
+
+default                             #F8F8F2
+keyword                             #FF79C6
+class                               #8BE9FD
+name                                #F1FA8C
+lambda                              #BD93F9
+string                              #F1FA8C
+number                              #BD93F9
+operator                            #FF79C6
+comment                             #6272A4
+special                             #8BE9FD
+type                                #8BE9FD
+constant                            #BD93F9
+builtin                             #50FA7B
+
+_highlight                          #FFB86C
+_link                               #8BE9FD, #8BE9FD
+
+[gruvbox]
+
+background                          #282828
+foreground                          #928374
+text_color                          #EBDBB2
+cursor                              #EBDBB2
+
+default                             #EBDBB2
+keyword                             #FB4934
+class                               #8EC07C
+name                                #FABD2F
+lambda                              #D3869B
+string                              #B8BB26
+number                              #D3869B
+operator                            #FE8019
+comment                             #928374
+special                             #83A598
+type                                #8EC07C
+constant                            #D3869B
+builtin                             #FE8019
+
+_highlight                          #FABD2F
+_link                               #83A598, #83A598
+
+[tokyo-night]
+
+background                          #1A1B26
+foreground                          #565F89
+text_color                          #C0CAF5
+cursor                              #C0CAF5
+
+default                             #C0CAF5
+keyword                             #BB9AF7
+class                               #7DCFFF
+name                                #E0AF68
+lambda                              #BB9AF7
+string                              #9ECE6A
+number                              #FF9E64
+operator                            #89DDFF
+comment                             #565F89
+special                             #7DCFFF
+type                                #2AC3DE
+constant                            #FF9E64
+builtin                             #7AA2F7
+
+_highlight                          #E0AF68
+_link                               #7DCFFF, #7DCFFF
+
+[catppuccin]
+
+background                          #1E1E2E
+foreground                          #6C7086
+text_color                          #CDD6F4
+cursor                              #F5E0DC
+
+default                             #CDD6F4
+keyword                             #CBA6F7
+class                               #89DCEB
+name                                #F9E2AF
+lambda                              #CBA6F7
+string                              #A6E3A1
+number                              #FAB387
+operator                            #89DCEB
+comment                             #6C7086
+special                             #89B4FA
+type                                #94E2D5
+constant                            #FAB387
+builtin                             #F38BA8
+
+_highlight                          #F9E2AF
+_link                               #89B4FA, #89B4FA
+
+[nord]
+
+background                          #2B313C
+foreground                          #7687A0
+text_color                          #ECEFF4
+cursor                              #ECEFF4
+
+default                             #D8DEE9
+keyword                             #88C0D0
+class                               #8FBCBB
+name                                #EBCB8B
+lambda                              #B48EAD
+string                              #A3BE8C
+number                              #B48EAD
+operator                            #81A1C1
+comment                             #7687A0
+special                             #81A1C1
+type                                #8FBCBB
+constant                            #B48EAD
+builtin                             #D08770
+
+_highlight                          #EBCB8B
+_link                               #88C0D0, #88C0D0
+
+[monokai]
+
+background                          #272822
+foreground                          #F8F8F2
+text_color                          #FFFFFF
+cursor                              #F8F8F0
+
+default                             #F8F8F2
+keyword                             #F92672
+class                               #A6E22E
+name                                #A6E22E
+lambda                              #F92672
+string                              #E6DB74
+number                              #AE81FF
+operator                            #F92672
+comment                             #75715E
+special                             #66D9EF
+type                                #66D9EF
+constant                            #AE81FF
+builtin                             #66D9EF
+
+_highlight                          #FD971F
+_link                               #66D9EF, #66D9EF

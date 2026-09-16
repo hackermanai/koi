@@ -148,8 +148,8 @@ zoom_in                             Cmd + =,                Cmd + Plus
 zoom_out                            Cmd + _,                Cmd + Minus
 toggle_split_editor                 Cmd + \
 show_file_explorer                  Cmd + P
-show_outline_panel                  Cmd + I
-show_buffer_explorer                Cmd + Shift + O
+show_outline_panel
+show_buffer_explorer                Cmd + Shift + O,        Cmd + Shift + \
 show_command_palette                Cmd + Shift + P
 -- open_terminal_at_file
 open_terminal                       Cmd + T
@@ -304,8 +304,8 @@ move_caret_forward_word_end         Option + Right,         Option + F
 extend_selection_back_word_end
 extend_selection_forward_word_end   Option + Shift + Right, Option + Shift + F
 
-move_caret_back_word_part
-move_caret_forward_word_part
+move_caret_back_word_part           Control + Left
+move_caret_forward_word_part        Control + Right
 
 extend_selection_back_word_part     Control + Shift + Left
 extend_selection_forward_word_part  Control + Shift + Right
@@ -342,8 +342,8 @@ previous_tab_extend                 Cmd + Shift + ;, Option + Shift + Cmd + Left
 next_tab                            Cmd + ', Option + Cmd + Right
 next_tab_extend                     Cmd + Shift + ', Option + Shift + Cmd + Right
 
-focus_main_editor                   Control + Left
-focus_split_editor                  Control + Right
+focus_main_editor
+focus_split_editor
 
 -- quick switch to buffer
 switch_to_buffer_1                  Cmd + 1

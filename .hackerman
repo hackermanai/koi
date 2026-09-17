@@ -148,8 +148,8 @@ zoom_in                             Cmd + =,                Cmd + Plus
 zoom_out                            Cmd + _,                Cmd + Minus
 toggle_split_editor                 Cmd + \
 show_file_explorer                  Cmd + P
-show_outline_panel
-show_buffer_explorer                Cmd + Shift + O,        Cmd + Shift + \
+show_outline_panel                  Cmd + I
+show_buffer_explorer                Cmd + B,                Cmd + Shift + \
 show_command_palette                Cmd + Shift + P
 -- open_terminal_at_file
 open_terminal                       Cmd + T

@@ -1,4 +1,6 @@
 
+-- this is the default config file for Koi Editor
+
 [license]
 
 path_to_license_file                -- path to license file, e.g. /Users/michael/Desktop/license.json

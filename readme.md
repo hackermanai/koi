@@ -3,11 +3,14 @@
 
 # Issue tracker for Koi Editor
 
-- [Download for Mac](https://koieditor.com/)
-- [Benchmarks](https://koieditor.com/benchmarks/)
-- [Documentation](https://koieditor.com/documentation/)
-- [API Reference](https://koieditor.com/api-reference/)
-- [Changelog](https://koieditor.com/changelog/)
-- [End User License Agreement](https://koieditor.com/end-user-license-agreement/)
-- [Privacy Policy](https://koieditor.com/privacy-policy/)
+- [koieditor.com](https://koieditor.com/)
+- [koieditor.com/docs](https://koieditor.com/docs/)
+- [koieditor.com/api](https://koieditor.com/api/)
+- [koieditor.com/benchmarks](https://koieditor.com/benchmarks/)
+- [koieditor.com/changelog](https://koieditor.com/changelog/)
+
+## Legal
+
+- [koieditor.com/end-user-license-agreement](https://koieditor.com/end-user-license-agreement/)
+- [koieditor.com/privacy-policy](https://koieditor.com/privacy-policy/)
 

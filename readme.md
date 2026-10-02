@@ -1,16 +1,16 @@
 
-![Koi Editor GitHub Banner](./github_banner.png)
+![Koi Editor](./koi_media.png)
 
 # Issue tracker for Koi Editor
 
-- [koieditor.com](https://koieditor.com/)
-- [koieditor.com/docs](https://koieditor.com/docs/)
-- [koieditor.com/api](https://koieditor.com/api/)
-- [koieditor.com/benchmarks](https://koieditor.com/benchmarks/)
-- [koieditor.com/changelog](https://koieditor.com/changelog/)
+- Website: [koieditor.com](https://koieditor.com/)
+- Documentation: [koieditor.com/docs](https://koieditor.com/docs/)
+- API Reference: [koieditor.com/api](https://koieditor.com/api/)
+- Benchmarks: [koieditor.com/benchmarks](https://koieditor.com/benchmarks/)
+- Changelog: [koieditor.com/changelog](https://koieditor.com/changelog/)
 
 ## Legal
 
-- [koieditor.com/end-user-license-agreement](https://koieditor.com/end-user-license-agreement/)
-- [koieditor.com/privacy-policy](https://koieditor.com/privacy-policy/)
+- EULA: [koieditor.com/end-user-license-agreement](https://koieditor.com/end-user-license-agreement/)
+- Privacy Policy: [koieditor.com/privacy-policy](https://koieditor.com/privacy-policy/)
 

@@ -1,5 +1,10 @@
 
-# This is the default scripts-file for Koi Editor
+#
+# This is the default scripts-file for Peeknext
+#
+# Documentation:
+# https://peeknext.com/docs/
+#
 
 @command("Word count")
 def word_count():

@@ -1,36 +1,36 @@
--- Koi Editor configuration
+-- Peeknext configuration
 --
--- Settings in this file override Koi's built-in defaults.
+-- Settings in this file override built-in defaults.
 -- Remove or comment a setting to use the current default.
 --
 -- Documentation:
--- https://koieditor.com/docs/
+-- https://peeknext.com/docs/
 --
 -- Default configuration:
--- https://github.com/hackermanai/koi/blob/main/.hackerman
+-- https://github.com/peeknext/peeknext/blob/main/.hackerman
 --
 -- Default scripts:
--- https://github.com/hackermanai/koi/blob/main/.hackerman-scripts
+-- https://github.com/peeknext/peeknext/blob/main/.hackerman-scripts
 --
 -- EULA:
--- https://koieditor.com/end-user-license-agreement/
+-- https://peeknext.com/end-user-license-agreement/
 --
 -- Privacy:
--- https://koieditor.com/privacy-policy/
+-- https://peeknext.com/privacy-policy/
 
 [license]
 
--- Koi is free for non-commercial use.
+-- Peeknext is free for non-commercial use.
 -- For commercial use, purchase a license at:
--- https://koieditor.com/
+-- https://peeknext.com/#pricing
 
-path_to_license_file                -- path to license file, /path/to/koi-license.json
+path_to_license_file                -- path to license file, /path/to/license.json
 
 
 [editor]
 
--- Use any installed font or add fonts to ~/Library/Application Support/Koi/fonts
--- See built-in themes: https://koieditor.com/docs/#appearance
+-- Use any installed font or add fonts to ~/Library/Application Support/Peeknext/fonts
+-- See built-in themes: https://peeknext.com/docs/#appearance
 
 font                                SF Mono
 font_weight                         -- light, normal, medium, bold, leave empty for default: normal on light mode and light on dark mode.
@@ -128,6 +128,8 @@ vertical_rulers                     -- list of columns
 
 -- experimental
 
+switch_tab_on_cmd_scroll            true
+hide_ui_on_type                     false
 -- always_show_completion_list         true
 -- wrap_word                           txt, md, 
 tabs_over_spaces                    false
@@ -397,13 +399,13 @@ extend_to_buffer_9
 
 -- Add custom functions here and assign key bindings.
 -- API documentation:
--- https://koieditor.com/api/
+-- https://peeknext.com/api/
 
 -- word_count                       Cmd + J
 
 
 -- Themes:
--- https://koieditor.com/docs/#themes
+-- https://peeknext.com/docs/#themes
 
 -- background                   (editor background)
 -- foreground                   (editor foreground)
@@ -414,7 +416,7 @@ extend_to_buffer_9
 -- keyword                      (keyword syntax color)
 -- class                        (class syntax color)
 -- name                         (function name syntax color)
--- lambda                       (anonymous function syntax color)
+-- function                     (fucntion def syntax color)
 -- string                       (string syntax color)
 -- number                       (number syntax color)
 -- operator                     (operator syntax color)
@@ -456,7 +458,7 @@ default                             #D8D8D2
 keyword                             #F0A45D
 class                               #E8E6DF
 name                                #D8D8D2
-lambda                              #D9A7C7
+function                            #D8D8D2
 string                              #C8B97A
 number                              #D9A7C7
 operator                            #AEB1AD
@@ -480,7 +482,7 @@ default                             #5d5d5d
 keyword                             #e03526
 class                               #111111
 name                                #292929
-lambda                              #292929
+function                            #292929
 string                              #787878
 number                              #292929
 operator                            #292929
@@ -507,7 +509,7 @@ default                             #f7f7f4
 keyword                             #E67D74
 class                               #D0C5A9
 name                                #D0C5A9
-lambda                              #D699B5
+function                            #D0C5A9
 string                              #D4BC7D
 number                              #D699B5
 operator                            #E0AD82
@@ -531,7 +533,7 @@ default                             #5d5d5d
 keyword                             #111111
 class                               #111111
 name                                #292929
-lambda                              #292929
+function                            #292929
 string                              #787878
 number                              #292929
 operator                            #292929
@@ -555,7 +557,7 @@ default                             #BFC9DB
 keyword                             #E67D74
 class                               #D0C5A9
 name                                #D0C5A9
-lambda                              #D699B5
+function                            #D0C5A9
 string                              #D4BC7D
 number                              #D699B5
 operator                            #E0AD82
@@ -578,7 +580,7 @@ default                             #C5C5C5
 keyword                             #CA7E5F
 class                               #B48B4B
 name                                #B48B4B
-lambda                              #B48B4B
+function                            #B48B4B
 string                              #7D9A67
 number                              #7592B8
 operator                            #C5C5C5
@@ -601,7 +603,7 @@ default                             #E3E9EF
 keyword                             #FB6E65
 class                               #EE9B52
 name                                #D2A8FF
-lambda                              #D2A8FF
+function                            #D2A8FF
 string                              #A5D6FF
 number                              #77BDFB
 operator                            #77BDFB
@@ -624,7 +626,7 @@ default                             #CBCEBC
 keyword                             #F07178
 class                               #D0C5A9
 name                                #FFCC66
-lambda                              #E0AD82
+function                            #FFCC66
 string                              #BAE67E
 number                              #FF6A27
 operator                            #F07178
@@ -645,7 +647,7 @@ default                             #BFBDB6
 keyword                             #FF8F3F
 class                               #5AC2FF
 name                                #FFB454
-lambda                              #D2A6FF
+function                            #FFB454
 string                              #AAD94C
 number                              #FFB454
 operator                            #BFBDB6
@@ -668,7 +670,7 @@ default                             #FFFFFF
 keyword                             #FF6B7A
 class                               #B392F0
 name                                #FFA657
-lambda                              #B392F0
+function                            #FFA657
 string                              #9ECBFF
 number                              #79B8FF
 operator                            #FF6B7A
@@ -690,7 +692,7 @@ default                             #D3B58D
 keyword                             #FFFFFF
 class                               #D3B58D
 name                                #D3B58D
-lambda                              #7FFFD4
+function                            #D3B58D
 string                              #98FB98
 number                              #D699B5
 operator                            #E0AD82
@@ -718,7 +720,7 @@ default                             #000000
 keyword                             #000000, bold
 class                               #000000, italic
 name                                #000000
-lambda                              #000000
+function                            #000000
 string                              #000000
 number                              #000000
 operator                            #000000
@@ -741,7 +743,7 @@ default                             #F8F8F2
 keyword                             #FF79C6
 class                               #8BE9FD
 name                                #F1FA8C
-lambda                              #BD93F9
+function                            #F1FA8C
 string                              #F1FA8C
 number                              #BD93F9
 operator                            #FF79C6
@@ -765,7 +767,7 @@ default                             #EBDBB2
 keyword                             #FB4934
 class                               #8EC07C
 name                                #FABD2F
-lambda                              #D3869B
+function                            #FABD2F
 string                              #B8BB26
 number                              #D3869B
 operator                            #FE8019
@@ -789,7 +791,7 @@ default                             #C0CAF5
 keyword                             #BB9AF7
 class                               #7DCFFF
 name                                #E0AF68
-lambda                              #BB9AF7
+function                            #E0AF68
 string                              #9ECE6A
 number                              #FF9E64
 operator                            #89DDFF
@@ -813,7 +815,7 @@ default                             #CDD6F4
 keyword                             #CBA6F7
 class                               #89DCEB
 name                                #F9E2AF
-lambda                              #CBA6F7
+function                            #F9E2AF
 string                              #A6E3A1
 number                              #FAB387
 operator                            #89DCEB
@@ -837,7 +839,7 @@ default                             #D8DEE9
 keyword                             #88C0D0
 class                               #8FBCBB
 name                                #EBCB8B
-lambda                              #B48EAD
+function                            #EBCB8B
 string                              #A3BE8C
 number                              #B48EAD
 operator                            #81A1C1
@@ -861,7 +863,7 @@ default                             #F8F8F2
 keyword                             #F92672
 class                               #A6E22E
 name                                #A6E22E
-lambda                              #F92672
+function                            #A6E22E
 string                              #E6DB74
 number                              #AE81FF
 operator                            #F92672

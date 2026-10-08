@@ -1,16 +1,16 @@
 
-![Koi Editor](./koi_media.png)
+![peeknext](./media.png)
 
-# Issue tracker for Koi Editor
+# Issue tracker for Peeknext
 
-- Website: [koieditor.com](https://koieditor.com/)
-- Documentation: [koieditor.com/docs](https://koieditor.com/docs/)
-- API Reference: [koieditor.com/api](https://koieditor.com/api/)
-- Benchmarks: [koieditor.com/benchmarks](https://koieditor.com/benchmarks/)
-- Changelog: [koieditor.com/changelog](https://koieditor.com/changelog/)
+- Website: [peeknext.com](https://peeknext.com/)
+- Documentation: [peeknext.com/docs](https://peeknext.com/docs/)
+- API Reference: [peeknext.com/api](https://peeknext.com/api/)
+- Benchmarks: [peeknext.com/benchmarks](https://peeknext.com/benchmarks/)
+- Changelog: [peeknext.com/changelog](https://peeknext.com/changelog/)
 
 ## Legal
 
-- EULA: [koieditor.com/end-user-license-agreement](https://koieditor.com/end-user-license-agreement/)
-- Privacy Policy: [koieditor.com/privacy-policy](https://koieditor.com/privacy-policy/)
+- EULA: [peeknext.com/end-user-license-agreement](https://peeknext.com/end-user-license-agreement/)
+- Privacy Policy: [peeknext.com/privacy-policy](https://peeknext.com/privacy-policy/)
 
